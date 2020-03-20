@@ -25,5 +25,5 @@ const MyComponent = () => (
 
 ### option 2: using graphql HOC
 ```javascript
-export default graphql(gql(helloWorldQuery))(MyComponent);
+export default (graphql(helloWorldQuery)(MyComponent));
 ```
