@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon index.js --ignore client",
-    "debug:dev": "DEBUG=* node index.js --ignore client"
+    "debug:all": "DEBUG=* node index.js --ignore client",
+    "debug:router": "DEBUG=express:router* node index.js --ignore client",
+    "debug:query": "DEBUG=mquery* node index.js --ignore client"
   },
   "author": "",
   "license": "ISC",
