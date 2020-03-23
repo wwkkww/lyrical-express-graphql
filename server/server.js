@@ -6,9 +6,10 @@ const bodyParser = require('body-parser');
 const schema = require('./schema/schema');
 
 const app = express();
-
+require('dotenv').config();
 // Replace with your mongoLab URI
-const MONGO_URI = 'mongodb+srv://wwkkww:kSaw7L0a876nHcIh@cluster0-yjq35.mongodb.net/test?retryWrites=true&w=majority';
+const { MONGO_USER, MONGO_PASSWORD, MONGO_PATH } = process.env;
+const MONGO_URI = `mongodb+srv://${MONGO_USER}:${MONGO_PASSWORD}${MONGO_PATH}`;
 if (!MONGO_URI) {
   throw new Error('You must provide a MongoLab URI');
 }
